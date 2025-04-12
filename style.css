@@ -1,0 +1,66 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7fcfe;
+}
+
+.container {
+    text-align: center;
+}
+
+#patternCanvas {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+#generateButton, #themeSelector {
+    margin-top: 15px !important;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Custom select container */
+.custom-select-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+select#themeSelector {
+    min-width: 180px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.color-preview {
+    display: flex;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+}
+
+/* Style for the selected item display */
+.selected-item {
+    display: flex;
+    align-items: center;
+}
+

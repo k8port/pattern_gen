@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Procedural Pattern Generator</h1>
+        <canvas id="patternCanvas" width="900" height="500"></canvas>
+        <br/>
+        <div class="controls">
+            <button id="generateButton">Generate</button>
+            <label>Theme select</label>
+            <div class="custom-select-container">
+                <select id="themeSelector" aria-label="Theme Select">
+                    <!-- Options will be populated via JavaScript -->
+                </select>
+                <div id="colorPreview" class="color-preview"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/algorithms/randomLines.js"></script>
+    <script src="./js/algorithms/randomRectangles.js"></script>
+    <script src="./js/algorithms/fractalLines.js"></script>
+    <script src="./js/algorithms/randomGradients.js"></script>
+    <script src="./js/algorithms/randomCircles.js"></script>
+    <script src="./js/algorithms/recursivePolygons.js"></script>
+    <script src="./js/algorithms/mondrian.js"></script>
+    <script src="./js/algorithms/unknownPleasures.js"></script>
+    <script src="./js/algorithms/stellaTriangles.js"></script>
+    <script src="./js/algorithms/morelletCrosses.js"></script>
+    <script src="js/patternGenerator.js"></script>
+    <script src="js/canvasRenderer.js"></script>
+    <script src="js/uiController.js"></script>
+    <script src="js/themeRegistry.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

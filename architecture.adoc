@@ -1,0 +1,110 @@
+= Procedural Pattern Generator - MVP Architecture
+
+:toc: left
+:toclevels: 3
+
+== Introduction
+
+Outlines architecture for Minimum Viable Product (MVP) of procedural pattern generator web application. Application allows users to generate abstract patterns using JavaScript algorithms and display them onto a canvas element.
+
+== Goals
+
+* Generates basic pattern using simple algorithm.
+* Users can trigger new pattern generation.
+* Displays generated pattern on canvas.
+* Establishes clean and maintainable codebase.
+
+== Architecture
+
+Application follows a simple modular architecture, separating concerns into distinct components:
+
+=== Modules
+
+* **`patternGenerator.js`:** Contains procedural pattern generation logic. 
+* **`canvasRenderer.js`:** Renders pattern onto canvas.
+* **`uiController.js`:** Manages user interactions and updates UI.
+* **`main.js`:** Application entry point and coordination of modules.
+
+
+=== Data Flow
+
+1.  User interaction with UI (e.g., clicks "Generate" button).
+2.  `uiController.js` receives user interaction event.
+3.  `uiController.js` calls `generatePattern()` function in `patternGenerator.js`.
+4.  `patternGenerator.js` generates array of data representing pattern.
+5.  `uiController.js` passes generated data to `canvasRenderer.js`.
+6.  `canvasRenderer.js` draws art onto HTML canvas.
+
+=== File Structure
+
+```
+pattern-generator/
+├── index.html
+├── style.css
+├── js/
+│   ├── patternGenerator.js
+│   ├── canvasRenderer.js
+│   └── uiController.js
+├── images/
+│   └── logo.png
+├── README.adoc
+├── package.json
+├── .gitignore
+```
+
+== Module Details
+
+=== `patternGenerator.js`
+
+* **Responsibilities:**
+    * Implements procedural pattern algorithm (e.g., random lines, basic fractal patterns).
+    * Generates array of data representing pattern (e.g., coordinates, colors).
+* **Functions:**
+    * `generatePattern()`: Returns an array of pattern data.
+<br/>
+
+=== `canvasRenderer.js`
+
+* **Responsibilities:**
+    * Draws pattern data onto HTML canvas.
+    * Handles canvas resizing and clearing.
+* **Functions:**
+    * `drawPattern(canvas, patternData)`: Draws pattern data onto specified canvas.
+<br/>
+
+=== `uiController.js`
+
+* **Responsibilities:**
+    * Manages user interactions (e.g., button clicks).
+    * Coordinates pattern generation and rendering.
+    * Updates UI elements.
+* **Functions:**
+    * `init(canvas)`: Initializes the UI controller and sets up event listeners.
+    * `handleGenerateClick()`: Handles "Generate" button click event.
+<br/>
+
+=== `main.js`
+
+* **Responsibilities:**
+    * Initializes application.
+    * Retrieves HTML canvas element.
+    * Initializes UI controller.
+* **Functions:**
+    * `init()`: Entry point of js code.
+<br/>
+
+== Future Considerations
+
+* Implement more complex procedural pattern algorithms.
+* Add user-configurable parameters.
+* Allow users to save and export generated patterns.
+* Allow users to select different color palettes.
+* Implement animations and interactive elements.
+* Add downloadable images.
+* Add pattern library for users to browse and select.
+* Add user authentication and account management.
+* Add pattern sharing and social features.
+* Add pattern search and filtering.
+* Add pattern categorization and organization.
+* Add pattern history and undo/redo functionality.
+
