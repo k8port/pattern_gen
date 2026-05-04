@@ -24,6 +24,9 @@ const uiController = {
             uiController.updateColorPreview(colorPreview, uiController.currentColors);
             uiController.handleThemeChange(canvas);
         });
+        
+        // Auto-generate initial pattern on page load
+        uiController.handleGenerateClick(canvas);
     },
 
     currentColors: {},
